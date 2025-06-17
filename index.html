@@ -26,7 +26,7 @@ document.getElementById('myForm').addEventListener('submit', async (e) => {
     const altura = parseInt(document.getElementById('altura').value);
 
     try {
-      const response = await fetch('https://bqapi-cloudrun-1020508652764.us-central1.run.app/', { // Sustituir con tu URL
+      const response = await fetch('https://bqapi-cloudrun-1020508652764.us-central1.run.app/insert', { 
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nombre, email, telefono, peso, altura })
